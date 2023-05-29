@@ -1,10 +1,13 @@
 /* zmienne i reset styli */
+
 :root {
   --color-main-dark: #1d1d1f;
   --color-main-red: #b92324;
   --color-white: #ffffff;
   --color-second-black: #020204;
   --color-second-red: #7a1612;
+  --animation-time-main: 0.2s;
+  --animation-time-long: 0.6s;
 }
 
 * {
@@ -13,11 +16,184 @@
   box-sizing: border-box;
 }
 
-/* Ustawienia nawigacji */
+body {
+  font-family: "Outfit", sans-serif;
+  height: 200vh;
+  background-color: black;
+}
+
+/* Ustawienia styli nawigacji */
 
 .main-nav {
   position: fixed;
   width: 100vw;
   height: 10vh;
-  background-color: black;
+  padding: 0 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-white);
+}
+
+/* Logo w nawigacji */
+
+.logo-container {
+  height: 80%;
+}
+
+.logo--link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 50%;
+}
+
+/* przycisk burger */
+
+.nav__burger-container {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.burger__bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-second-black);
+}
+
+.burger__bar::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  background-color: var(--color-second-black);
+}
+
+.burger__bar::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -8px;
+  left: 0;
+  background-color: var(--color-second-black);
+}
+
+.burger__bar::before,
+.burger__bar::after {
+  transition: transform var(--animation-time-main);
+}
+
+/* Elementy menu */
+
+.nav__elements-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-white);
+  transform: translateY(-100vh);
+  transition: transform var(--animation-time-long);
+}
+
+.nav__elements {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  list-style: none;
+  width: 50%;
+  text-align: center;
+}
+
+.nav__element {
+  margin: 10px 0;
+}
+
+.element--link {
+  text-decoration: none;
+  color: var(--color-second-black);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform var(--animation-time-main);
+}
+
+.nav__elements-container {
+  z-index: 10;
+}
+.burger__bar,
+.logo-container {
+  z-index: 11;
+}
+
+/* Oferta w menu */
+
+.element--link-offer i {
+  margin-left: 5px;
+  transition: transform var(--animation-time-main);
+}
+
+.offer__elements {
+  list-style: none;
+  margin-top: 10px;
+  display: none;
+}
+
+.offer__element {
+  padding: 5px 0;
+}
+
+.offer--link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-main-dark);
+}
+
+/* Klasy związane z animacjami w menu */
+
+.element--link:hover {
+  color: var(--color-second-red);
+}
+
+/* Klasa offer-active jest dodawana do animacji związanej z rozwijaniem listy oferty w menu mobilnym */
+
+.offer-active .element--link {
+  color: var(--color-second-red);
+}
+
+.offer-active i {
+  transform: rotate(180deg);
+  color: var(--color-second-red);
+}
+
+.offer-active .offer__elements {
+  display: block;
+}
+
+.menu-active .nav__elements-container {
+  transform: translateY(0);
+}
+
+.menu-active .burger__bar {
+  background-color: transparent;
+}
+
+.menu-active .burger__bar::after {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-active .burger__bar::before {
+  transform: translateY(-8px) rotate(-45deg);
 }
