@@ -8,6 +8,7 @@
   --color-second-red: #7a1612;
   --animation-time-main: 0.2s;
   --animation-time-long: 0.6s;
+  --animation-time-long-plus: 0.8s;
 }
 
 * {
@@ -248,5 +249,26 @@ body {
 
   .element--link-offer i {
     display: none;
+  }
+}
+
+/* tytuły sekcji */
+
+section {
+  padding: 0 5%;
+}
+
+.section-title {
+  text-align: center;
+  padding: 20px 0;
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 2.8rem;
+    letter-spacing: 1px;
   }
 }
