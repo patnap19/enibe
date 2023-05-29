@@ -1,0 +1,23 @@
+/* zmienne i reset styli */
+:root {
+  --color-main-dark: #1d1d1f;
+  --color-main-red: #b92324;
+  --color-white: #ffffff;
+  --color-second-black: #020204;
+  --color-second-red: #7a1612;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ustawienia nawigacji */
+
+.main-nav {
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  background-color: black;
+}
