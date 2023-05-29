@@ -3,13 +3,14 @@
 // Animacja związna z rozwijaniem oferty w menu mobilnym
 
 const offerListTrigger = document.querySelector(".element--link-offer");
+const offerListBtn = document.querySelector(".element--link-offer a");
 
 if (window.innerWidth > 1200) {
-  offerListTrigger.addEventListener("click", () => {
+  offerListBtn.addEventListener("click", () => {
     alert("wodsa");
   });
 } else {
-  offerListTrigger.addEventListener("click", () => {
+  offerListBtn.addEventListener("click", () => {
     offerListTrigger.classList.toggle("offer-active");
   });
 }

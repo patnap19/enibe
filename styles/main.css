@@ -160,6 +160,11 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--color-main-dark);
+  transition: color var(--animation-time-main);
+}
+
+.offer--link:hover {
+  color: var(--color-main-red);
 }
 
 /* Klasy związane z animacjami w menu */
@@ -230,7 +235,7 @@ body {
     left: 50%;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .nav__element {
