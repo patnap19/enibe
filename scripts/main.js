@@ -4,9 +4,15 @@
 
 const offerListTrigger = document.querySelector(".element--link-offer");
 
-offerListTrigger.addEventListener("click", () => {
-  offerListTrigger.classList.toggle("offer-active");
-});
+if (window.innerWidth > 1200) {
+  offerListTrigger.addEventListener("click", () => {
+    alert("wodsa");
+  });
+} else {
+  offerListTrigger.addEventListener("click", () => {
+    offerListTrigger.classList.toggle("offer-active");
+  });
+}
 
 // Animacja związana z rozwiajniem menu mobilnego
 

@@ -26,6 +26,7 @@ body {
 
 .main-nav {
   position: fixed;
+  z-index: 10;
   width: 100vw;
   height: 10vh;
   padding: 0 3%;
@@ -196,4 +197,66 @@ body {
 
 .menu-active .burger__bar::before {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Widok desktop dla menu */
+
+@media screen and (min-width: 1200px) {
+  .main-nav {
+    padding: 0 5%;
+  }
+  .nav__burger-container {
+    display: none;
+  }
+
+  .logo {
+    height: 60%;
+  }
+
+  .nav__elements-container {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    transform: translateY(0);
+    transition: none;
+  }
+
+  .nav__elements {
+    position: relative;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav__element {
+    margin: 0;
+  }
+
+  .element--link {
+    font-size: 1.5rem;
+  }
+
+  .element--link-offer i {
+    display: none;
+  }
+}
+
+/* Sekacja header w częsci Głównej */
+
+.header {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to top, var(--color-second-red) 12%, transparent),
+    url("../images/office_header_mobile_top.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
