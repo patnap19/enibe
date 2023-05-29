@@ -265,3 +265,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.title__container {
+  position: absolute;
+  top: 50%;
+  width: 90%;
+  margin: 0 5%;
+  text-align: center;
+}

@@ -27,3 +27,11 @@ menuTrigger.addEventListener("click", () => {
     offerListTrigger.classList.remove("offer-active");
   }
 });
+
+// Animacja związana z tytułem strony
+
+const header = document.querySelector(".main-header");
+
+window.addEventListener("load", () => {
+  header.classList.add("header-active");
+});

@@ -1,0 +1,33 @@
+.main-header {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to top, var(--color-second-red) 12%, transparent),
+    url("../images/office_header_mobile_top.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title__container {
+  position: absolute;
+  top: 50%;
+  width: 90%;
+  margin: 0 5%;
+  text-align: center;
+  transform: translateX(-120%);
+  transition: transform var(--animation-time-long);
+}
+
+.title {
+  color: var(--color-white);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 3rem;
+}
+
+.header-active .title__container {
+  transform: translateX(0);
+}
