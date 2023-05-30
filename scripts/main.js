@@ -5,7 +5,7 @@
 const offerListTrigger = document.querySelector(".element--link-offer");
 const offerListBtn = document.querySelector(".element--link-offer a");
 
-if (window.innerWidth > 1200) {
+if (window.innerWidth > 1000) {
   offerListBtn.addEventListener("click", () => {
     alert("wodsa");
   });

@@ -19,7 +19,6 @@
 
 body {
   font-family: "Outfit", sans-serif;
-  min-height: 300vh;
   background-color: black;
 }
 
@@ -207,7 +206,7 @@ body {
 
 /* Widok desktop dla menu */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .main-nav {
     padding: 0 5%;
   }
@@ -264,7 +263,7 @@ section {
   letter-spacing: 2px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .section-title {
     text-align: center;
     padding: 50px 0;

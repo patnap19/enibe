@@ -62,7 +62,7 @@
   color: var(--color-second-red);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .main-header {
     background: linear-gradient(
         to top,
@@ -126,7 +126,7 @@
   background-color: var(--color-second-red);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .about-us-description {
     text-align: justify;
     padding: 40px 0;
@@ -153,6 +153,7 @@
 .offer {
   background-color: var(--color-second-red);
   color: var(--color-white);
+  padding-bottom: 40px;
 }
 
 .offer__element {
@@ -205,4 +206,49 @@
   text-decoration: none;
   color: var(--color-main-dark);
   letter-spacing: 1px;
+}
+
+@media screen and (min-width: 1000px) {
+  .offer {
+    padding-bottom: 50px;
+  }
+
+  .offer__element {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+  }
+
+  .offer-img__container {
+    height: 100%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .offer__element:nth-child(even) {
+    grid-template-columns: 1fr 40%;
+  }
+
+  .offer__element:nth-child(even) .offer-img__container {
+    grid-column-start: 3;
+    grid-column-end: 2;
+  }
+
+  .offer-img {
+    height: 100%;
+  }
+
+  .offer-title {
+    padding-top: 25px;
+    font-size: 2rem;
+  }
+
+  .offer-detail--link {
+    font-size: 1.4rem;
+    transition: all var(--animation-time-main);
+  }
+
+  .offer-detail--link:hover {
+    color: var(--color-main-red);
+  }
 }
