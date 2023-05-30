@@ -94,12 +94,22 @@
 .about-us-description {
   text-align: justify;
   padding: 20px 0;
+  width: 100%;
+  transform: translateX(-110%);
+  transition: transform var(--animation-time-long-plus);
 }
 
 .button__container {
   width: 100%;
   text-align: center;
   padding: 44px 0;
+  transform: translateX(-110%);
+  transition: transform var(--animation-time-long-plus);
+}
+
+.about-us--show .about-us-description,
+.about-us--show .button__container {
+  transform: translateX(0);
 }
 
 .projects--btn {
@@ -136,4 +146,63 @@
     border: 2px solid var(--color-second-red);
     transition: all var(--animation-time-main);
   }
+}
+
+/* Sekcja oferta */
+
+.offer {
+  background-color: var(--color-second-red);
+  color: var(--color-white);
+}
+
+.offer__element {
+  width: 100%;
+  background-color: var(--color-white);
+  padding: 0;
+  margin: 30px 0;
+}
+
+.offer-img__container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.offer-img {
+  width: 100%;
+  transition: transform var(--animation-time-long);
+}
+
+.offer-img__container:hover .offer-img {
+  transform: scale(1.1);
+}
+
+.offer-title {
+  color: var(--color-second-black);
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.offer-desc__container {
+  padding: 15px 5%;
+}
+
+.offer-details-list {
+  list-style-type: none;
+  text-align: center;
+}
+
+.offer-detail {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--color-second-red);
+}
+
+.offer-detail:last-child {
+  border: none;
+}
+
+.offer-detail--link {
+  text-decoration: none;
+  color: var(--color-main-dark);
+  letter-spacing: 1px;
 }

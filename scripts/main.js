@@ -35,3 +35,16 @@ const header = document.querySelector(".main-header");
 window.addEventListener("load", () => {
   header.classList.add("header-active");
 });
+
+// Animacja dla sekcji about-us
+const aboutUsSection = document.querySelector(".about-us");
+const aboutUsDesc = document.querySelector(".about-us-description");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > header.clientHeight / 3) {
+    console.log(window.scrollY);
+    aboutUsSection.classList.add("about-us--show");
+  } else {
+    aboutUsSection.classList.remove("about-us--show");
+  }
+});

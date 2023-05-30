@@ -19,7 +19,7 @@
 
 body {
   font-family: "Outfit", sans-serif;
-  height: 200vh;
+  min-height: 300vh;
   background-color: black;
 }
 
@@ -261,7 +261,7 @@ section {
 .section-title {
   text-align: center;
   padding: 20px 0;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 @media screen and (min-width: 1200px) {
